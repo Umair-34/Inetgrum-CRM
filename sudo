@@ -1,0 +1,18 @@
+Collecting asgi_redis
+  Downloading asgi_redis-1.4.3-py2.py3-none-any.whl (20 kB)
+Collecting redis~=2.10.6
+  Downloading redis-2.10.6-py2.py3-none-any.whl (64 kB)
+Processing /home/umair/.cache/pip/wheels/03/7f/e7/8ec405fe5220fe1401be3dfa943f6e1f10b525f54f68d75e0a/msgpack_python-0.5.6-cp38-cp38-linux_x86_64.whl
+Requirement already satisfied: six in /home/umair/Desktop/Backup/Running/CP-TODO-master/venv/lib/python3.8/site-packages (from asgi_redis) (1.15.0)
+Collecting asgiref~=1.1.2
+  Downloading asgiref-1.1.2-py2.py3-none-any.whl (12 kB)
+Installing collected packages: redis, msgpack-python, asgiref, asgi-redis
+  Attempting uninstall: redis
+    Found existing installation: redis 3.5.3
+    Uninstalling redis-3.5.3:
+      Successfully uninstalled redis-3.5.3
+  Attempting uninstall: asgiref
+    Found existing installation: asgiref 3.2.10
+    Uninstalling asgiref-3.2.10:
+      Successfully uninstalled asgiref-3.2.10
+Successfully installed asgi-redis-1.4.3 asgiref-1.1.2 msgpack-python-0.5.6 redis-2.10.6

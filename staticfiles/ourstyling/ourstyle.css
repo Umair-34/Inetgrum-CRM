@@ -1,0 +1,45 @@
+#boxshadow {
+    box-shadow: 0 4px 8px 0 indigo, 0 6px 20px 0 indigo;
+}
+
+#logostyle {
+    width: 25%;
+    height: 25%;
+}
+
+#headerlogo {
+    width: 2%;
+    height: 2%;
+}
+
+#zindex {
+    z-index: +1;
+}
+
+.box {
+    transition: box-shadow .3s;
+    /* width: 300px;
+    height: 500px;
+    margin: 50px; */
+    /* border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    float: left; */
+}
+
+.box:hover {
+    box-shadow: 0 3px 7px #dfb3ff, 0 5px 18px 0 #dfb3ff;
+    ;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.swiper {
+    scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .swiper > img {
+    scroll-snap-align: start;
+  }

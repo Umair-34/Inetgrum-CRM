@@ -1,0 +1,206 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Integrum - Contact us</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- Bootstrap CSS -->
+    
+
+    <link href="/static/app-assets/css/style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/ourstyling/ourstyle.css">
+</head>
+
+<body>
+    <nav id="zindex" class="fixed flex items-center justify-between flex-wrap bg-indigo-800 p-6 ">
+
+        <img id="headerlogo" src="{% static '/app-assets/images/logo/logo.png' %}" alt="branding logo">
+
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <span style="font-size: 158%;" class="font-semibold text-xl tracking-tight">Integrum</span>
+        </div>
+        <div class="block lg:hidden">
+            <button
+                class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+        <div style="text-align: center;" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+            <div class="text-lr lg:flex-grow">
+                <a href="/" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-4">
+                    <strong>Home</strong>
+                </a>
+                <!-- <a href="#solutions" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                    <strong>Solutions</strong>
+                </a>
+                <a href="#Resources" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                    <strong>Resources</strong>
+                </a>
+                <a href="#whyus" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                    <strong>Why us?</strong>
+                </a>
+                <a href="#pricing" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
+                    <strong>Pricing</strong>
+                </a> -->
+            </div>
+            <div>
+                <a href="/register"
+                    class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Register</a>
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="text-gray-700 body-font relative">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Contact Us</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Want to get in touch? we'd love to hear from you.
+                    Here's how can you reach...</p>
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-1/2">
+                        <input
+                            class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                            placeholder="Name" type="text">
+                    </div>
+                    <div class="p-2 w-1/2">
+                        <input
+                            class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-indigo-500 text-base px-4 py-2"
+                            placeholder="Email" type="email">
+                    </div>
+                    <div class="p-2 w-full">
+                        <textarea
+                            class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-indigo-500 text-base px-4 py-2 resize-none block"
+                            placeholder="Message"></textarea>
+                    </div>
+                    <div class="p-2 w-full">
+                        <a href="{% url 'home' %}">
+                        <button 
+                            class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send</button>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="text-gray-700 body-font">
+            <div
+                class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+                <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+                        <img style="width: 15%; height: 15%;" src="{% static '/app-assets/images/logo/logo.png' %}"
+                            alt="branding logo">
+                        <span class="ml-3 text-xl">Integrum</span>
+                    </a>
+                    <p class="mt-2 text-sm text-black-500">A business absolutely devoted to Customer Service Excellence
+                        will
+                        have only one worry about profits. They will be embarrassingly large.</p>
+                </div>
+                <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"></h2>
+                        <!-- <nav class="list-none mb-10">
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">First Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Second Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Third Link</a>
+                        </li>
+                        <li>
+                            <a class="text-gray-600 hover:text-gray-800">Fourth Link</a>
+                        </li>
+                    </nav> -->
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"></h2>
+                        
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Resources</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Technical Support</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">My Account</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">COMPANY</h2>
+                        <nav class="list-none mb-10">
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">About Us</a>
+                            </li>
+                            <li>
+                                <a href="/contactus" class="text-gray-600 hover:text-gray-800">Contact US</a>
+                            </li>
+                            <li>
+                                <a class="text-gray-600 hover:text-gray-800">Terms and Policies</a>
+                            </li>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-200">
+                <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+                    <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Integrum 
+            
+                    </p>
+                    <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+                        <a class="text-gray-500" href="http://www.facebook.com/integrum.official" rel="noopener noreferrer">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500" href="https://www.twitter.com/integrum4" rel="noopener noreferrer">
+                            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                class="w-5 h-5" viewBox="0 0 24 24">
+                                <path
+                                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500" href="https://www.instagram.com/integrum.official" rel="noopener noreferrer" >
+                            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                            </svg>
+                        </a>
+                        <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/muhammad-umair-8652a51a2" rel="noopener noreferrer">
+                            <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                <path stroke="none"
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                </path>
+                                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                            </svg>
+                        </a> 
+                    </span>
+                </div>
+            </div>
+        </footer>
+
+</body>
+
+</html>
+
+
+<!-- j!#4=@eXcqJg]Nv -->

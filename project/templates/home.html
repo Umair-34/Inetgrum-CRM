@@ -1,0 +1,643 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="{% static '/app-assets/images/ico/favicon.ico' %}">
+  <title> Integrum </title>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="{% static '/app-assets/css/style.css' %}" type="text/css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="{% static '/ourstyling/ourstyle.css' %}">
+
+<body>
+
+
+  <!-- Navbar Header -->
+  <nav id="zindex"  class="fixed flex items-center justify-between flex-wrap bg-indigo-800 p-6 " style="width:100%;">
+
+    <img id="headerlogo" src="{% static '/app-assets/images/logo/logo.png' %}" alt="branding logo">
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <span style="font-size: 158%;" class="font-semibold text-xl tracking-tight">Integrum</span>
+    </div>
+    
+    <div class="block lg:hidden">
+      
+      <button
+        class="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </div>
+    <div style="text-align: center;" class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
+      <div class="text-lr lg:flex-grow">
+        <a href="#homepage" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-5">
+          <strong>Home</strong>
+        </a>
+        {% comment %} <a href="#solutions" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-5">
+          <strong>Solutions</strong> {% endcomment %}
+        </a>
+        <a href="#Resources" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-5">
+          <strong>Resources</strong>
+        </a>
+        <a href="#whyus" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-5">
+          <strong>Why us?</strong>
+        </a>
+        <a href="#pricing" class="block mt-4 lg:inline-block lg:mt-0 text-white hover:text-teal-200 mr-5">
+          <strong>Pricing</strong>
+        </a>
+      </div>
+      <div>
+        <a href="{% url 'landingRegister:register' %}"
+          class="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Register</a>
+      </div>
+    </div>
+
+  </nav>
+
+  <section>
+
+  </section>>
+  <!-- left Img - one stop solution-->
+  <section id="homepage" class="text-gray-700 body-font overflow-hidden box">
+    <div class="container px-5 py-24 mx-auto ">
+      <div class="lg:w-4/5 mx-auto flex flex-wrap">
+        <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+          <div class="flex mb-4">
+            <h1
+              class="flex-grow text-indigo-600 text-4xl title-font font-medium  border-b-2 border-indigo-600 border-b-2 border-indigo-500"
+              style="font-size:50px">
+              One Stop Solutions</h1>
+          </div>
+          <p class="leading-relaxed mb-4" style="font-size:25px">
+            A single platform for all your needs.
+            Plan your track your work,
+            Communicate with the team
+            without the hassle of creating and managing multiple accounts
+          </p>
+          <span class="inline-block h-1 w-10 rounded bg-indigo-600 mt-8 mb-6"></span>
+        </div>
+        <img alt="oss" style="margin-top: 20px;"
+          class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+          src="{% static '/app-assets/images/one-stop-solutions.png' %}">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- right image - Plan your work -->
+  <section class="text-gray-700 body-font overflow-hidden box">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-4/5 mx-auto flex flex-wrap">
+        <img alt="pyw" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+          src="{% static '/app-assets/images/plan-your-work.png' %}">
+        <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+          <div class="flex mb-4">
+            <h1
+              class="flex-grow text-indigo-600 text-4xl title-font font-medium  border-b-2 border-indigo-600 border-b-2 border-indigo-500"
+              style="font-size:50px">
+              Plan your work</h1>
+          </div>
+          <p class="leading-relaxed" style="font-size:25px">
+            Plan all of your Projects and tasks in a stream line manner and never lose sight of your goals.
+          </p>
+          <span class="inline-block h-1 w-10 rounded bg-indigo-600 mt-8 mb-6"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- left img - communicate -->
+  <section class="text-gray-700 body-font overflow-hidden box">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="lg:w-4/5 mx-auto flex flex-wrap">
+        <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+          <div class="flex mb-4">
+            <h1
+              class="flex-grow text-indigo-600 text-4xl title-font font-medium  border-b-2 border-indigo-600 border-b-2 border-indigo-500"
+              style="font-size:50px">
+              Communicate</h1>
+          </div>
+          <p class="leading-relaxed mb-5" style="font-size:25px">
+            Communicate with your team without the hassle of creating and maintaining multiple accounts and
+            subscriptions..
+          </p>
+          <span class="inline-block h-1 w-10 rounded bg-indigo-600 mt-8 mb-6"></span>
+        </div>
+        <img alt="chat" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded"
+          src="{% static '/app-assets/images/chat.png' %}">
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources  -->
+  <section id="Resources" class="text-gray-700 body-font box">
+
+    <div class="container px-5 py-24 w-full mx-auto ">
+      <h1
+        class="flex-grow text-indigo-600 text-4xl title-font font-medium  border-b-2 border-indigo-600 border-b-2 border-indigo-500" style="font-size:50px">
+        Resources</h1>
+      <p class="leading-relaxed text-lg" style="text-align: justify; text-justify: inter-word;">
+        <ul style="font-size:25px">
+          <li>
+            You've got lots of
+            options on your fingertips. 
+          </li>
+          <li>
+            Keep all your tasks handy.
+          </li>
+          <li>
+            Stay on top of your project deadlines.
+          </li>
+          <li>
+            Add unlimted files assoiciated with your projects.
+          </li>
+          <li>
+            Comment on on-going tasks to remind the member of any new alterations or directions.
+          </li>
+          <li>
+            Chat with your team and never miss out on the important things.
+          </li>
+          <li>
+            You also have a personal Channel just for to remember your to-do's,<br>
+            and keep important links at an arms reach.
+          </li>
+          <li>
+            We have also got our hamster working over time to bring you, your very own personal chat bot.
+          </li>
+        </ul>
+      </p>
+      <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="whyus" class="text-gray-700 body-font box">
+    <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+      {% comment %} <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" alt="hero"
+        src="{% static '/app-assets/images/comm-with-team_400x400.jpg' %}"> {% endcomment %}
+      <div class="text-center lg:w-2/3 w-full">
+        <h1 class="flex-grow text-indigo-600 text-4xl title-font font-medium  border-b-2 border-indigo-600 border-b-2 border-indigo-500" style="font-size:50px">Why Us?</h1>
+        <p class="mb-8 leading-relaxed" style="font-size:25px">
+          Integrum provides a single platform <!--developed and maintained by a
+          prodigal team--> to
+          stream line the development and communication aspect of your projects.
+          With an in-built project management and communication module your life just became a whole lot
+          easier
+          Divide your projects into sub-tasks, assign them to your team members, add
+          due dates,
+          check your projects completion status all in one-go.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- pricing -->
+  <section id="pricing" class="text-gray-700 body-font overflow-visible">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Pricing</h1>
+
+        <div>
+          <span class="lg:w-2/3 mx-auto leading-relaxed text-base">Blling Cycle </span>
+
+          <button class="py-1 px-4 bg-indigo-500 text-white focus:outline-none">Monthly</button>
+          <!-- <button class="py-1 px-4 focus:outline-none">Annually</button> -->
+        </div>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+        </div>
+        <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+          <div class="h-full p-6 rounded-lg border-2 border-indigo-400 flex flex-col relative overflow-hidden box">
+            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">BASIC</h2>
+            <span
+              class="bg-indigo-500 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
+            <h1 class="text-5xl text-gray-900 pb-4 mb-4 border-b border-gray-200 leading-none">Free</h1>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Scrum style project tracking
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>One on One Chat
+            </p>
+            <p class="flex items-center text-gray-600 mb-6">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Dashboard access
+            </p>
+            <p class="flex items-center text-gray-600 mb-6">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>And much more
+            </p>
+            <a href="{% url 'landingRegister:register' %}">
+              <button
+                class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Register
+
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+
+              </button>
+            </a>
+            <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+          <div class="h-full p-6 rounded-lg border-2 border-indigo-400 flex flex-col relative overflow-hidden box">
+            <h2 class="text-sm tracking-widest title-font mb-1 font-medium">PRO</h2>
+            <h1 class="text-5xl text-gray-900 leading-none flex items-center pb-4 mb-4 border-b border-gray-200">
+              <span>$20</span>
+              <span class="text-lg ml-1 font-normal text-gray-500">/mo</span>
+            </h1>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>One on One Chat
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Scrum/KANBAN style project tracking
+            </p>
+            <p class="flex items-center text-gray-600 mb-2">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>Dashboard access
+            </p>
+            <p class="flex items-center text-gray-600 mb-6">
+              <span
+                class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-500 text-white rounded-full flex-shrink-0">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                  class="w-3 h-3" viewBox="0 0 24 24">
+                  <path d="M20 6L9 17l-5-5"></path>
+                </svg>
+              </span>And much more
+            </p>
+            <a href="{% url 'landingRegister:comingsoon' %}">
+              <button
+                class="flex items-center mt-auto text-white bg-indigo-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-indigo-600 rounded">Register
+
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+
+
+              </button></a>
+            <p class="text-xs text-gray-500 mt-3">Literally you probably haven't heard of them jean shorts.
+            </p>
+          </div>
+        </div>
+        <div class="p-4 xl:w-1/4 md:w-1/2 w-full">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- our team -->
+  <section id="aboutus" class="text-gray-700 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 class="text-2xl font-medium title-font mb-4 text-gray-900 tracking-widest">OUR TEAM</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">A team of prodiagal developers, motivated to give you the
+          best solutions</p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left box">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="{% static '/ourimg/Umair_img.jpeg' %}">
+            <div class="flex-grow sm:pl-8 ">
+              <h2 class="title-font font-medium text-lg text-gray-900">Muhammad Umair</h2>
+              <h3 class="text-gray-500 mb-3">Full stack Django Developer</h3>
+              <p class="mb-4">From full stuck developer to Full stack developer</p>
+              <span class="inline-flex">
+                <a class="text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                    </path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left box">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="{% static '/ourimg/umer.png' %}">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">M Umer Farooq</h2>
+              <h3 class="text-gray-500 mb-3">I make whatever i like</h3>
+              <p class="mb-4">Black vigo go vroom vroom</p>
+              <span class="inline-flex">
+                <a class="text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                    </path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left box">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="{% static '/ourimg/asad.png' %}">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">Asad Raza</h2>
+              <h3 class="text-gray-500 mb-3">Python Developer</h3>
+              <p class="mb-4"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</p>
+              <span class="inline-flex">
+                <a class="text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                    </path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left box">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="{% static '/ourimg/faran.jpeg' %}">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">M faran Khalid</h2>
+              <h3 class="text-gray-500 mb-3">ML mistri</h3>
+              <p class="mb-4">Dada what is this behavoiur</p>
+              <span class="inline-flex">
+                <a class="text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                    </path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-4 lg:w-1/2">
+          <div
+            class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left box">
+            <img alt="team" class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+              src="{% static '/ourimg/airaj.jpeg' %}">
+            <div class="flex-grow sm:pl-8">
+              <h2 class="title-font font-medium text-lg text-gray-900">S Airaj Raza</h2>
+              <h3 class="text-gray-500 mb-3">ML mistri-lite</h3>
+              <p class="mb-4">Whosoever lives, so shall they die; and may they die a drowning death, with all of Life
+                inside their mouths</p>
+              <span class="inline-flex">
+                <a class="text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                    </path>
+                  </svg>
+                </a>
+                <a class="ml-2 text-gray-500">
+                  <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                    </path>
+                  </svg>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- footer -->
+  <footer class="text-gray-700 body-font">
+    <div
+      class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-no-wrap flex-wrap flex-col">
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <img style="width: 15%; height: 15%;" src="{% static '/app-assets/images/logo/logo.png' %}"
+            alt="branding logo">
+          <span class="ml-3 text-xl">Integrum</span>
+        </a>
+        <p class="mt-2 text-sm text-black-500">A business absolutely devoted to Customer Service Excellence
+          only one worry about profits. They will be embarrassingly large.</p>
+      </div>
+      <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"></h2>
+
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3"></h2>
+
+        </div>
+
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">Resources</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a class="text-gray-600 hover:text-gray-800">Technical Support</a>
+            </li>
+            <li>
+              <a href="{% url 'login' %}"  class="text-gray-600 hover:text-gray-800">My Account</a>'
+            </li>
+          </nav>
+        </div>
+        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+          <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">COMPANY</h2>
+          <nav class="list-none mb-10">
+            <li>
+              <a href = "#aboutus" class="text-gray-600 hover:text-gray-800">About Us</a>
+            </li>
+            <li>
+              <a href="{% url 'landingRegister:contactus' %}" class="text-gray-600 hover:text-gray-800">Contact US</a>
+            </li>
+          
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-200">
+      <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+        <p class="text-gray-500 text-sm text-center sm:text-left">© 2020 Integrum
+        </p>
+        <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <a class="text-gray-500" href="http://www.facebook.com/integrum.official" rel="noopener noreferrer">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500" href="https://www.twitter.com/integrum4" rel="noopener noreferrer">
+            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+              viewBox="0 0 24 24">
+              <path
+                d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+              </path>
+            </svg>
+          </a>
+          <a class="ml-3 text-gray-500" href="https://www.instagram.com/integrum.official" rel="noopener noreferrer">
+            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              class="w-5 h-5" viewBox="0 0 24 24">
+              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+            </svg>
+          </a>
+          <!-- {% comment %} <a class="ml-3 text-gray-500" href="https://www.linkedin.com/in/muhammad-umair-8652a51a2" rel="noopener noreferrer">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>  {% endcomment %} -->
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="{% static '/app-assets/js/landing-js/jquery-3.2.1.slim.min.js' %}"></script>
+  <script src="{% static '/app-assets/js/landing-js/popper.min.js' %}"></script>
+  <script src="{% static '/app-assets/js/landing-js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
+
+
+
+<!-- Want to get in touch? we'd love to hear from you. Here's how can you reach -->

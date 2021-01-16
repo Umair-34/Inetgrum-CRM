@@ -1,0 +1,19 @@
+#boxshadow {
+    box-shadow: 0 4px 8px 0 red, 0 6px 20px 0 red;
+}
+
+#logostyle {
+    width: 25%;
+    height: 25%;
+}
+
+#headerlogo {
+    width: 2%;
+    height: 2%;
+
+}
+
+#zindex{
+    z-index: +1;
+}
+
