@@ -1,4 +1,4 @@
-Make sure you are running rhis projct in Operating system ubuntu 20.0+
+Make sure you are running this projct in Operating system ubuntu 20.0+
 use terminal for all the followiing commands.
 
 Unzip the project folder "Integrum"
