@@ -1,3 +1,5 @@
+This the first django project on which i've worked.
+
 Make sure you are running this projct in Operating system ubuntu 20.0+
 use terminal for all the followiing commands.
 
